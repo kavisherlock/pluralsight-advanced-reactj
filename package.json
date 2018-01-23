@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Advanced React course",
   "main": "lib/server.js",
-  "author": "Kavish M",
+  "author": "Kavisherlock",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watchAll"
   },
@@ -19,12 +19,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
     "jest": "^22.1.4",
     "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
@@ -34,6 +37,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "pm2": "^2.9.1",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "webpack": "^3.10.0"
